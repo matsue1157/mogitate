@@ -1,0 +1,146 @@
+/* 全体のレイアウト */
+.product-index {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-index__title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.product-index__add-button {
+    margin: 20px 0;
+}
+
+.button-add {
+    display: inline-block;
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button-add:hover {
+    background-color: #218838;
+}
+
+/* 検索フォーム・並び替えフォーム */
+.product-index__search-form,
+.product-index__sort-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.product-index__search-form input[type="text"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 200px;
+}
+
+.product-index__search-form button {
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.product-index__sort-form select {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+/* 並び替えタグ */
+.product-index__tag {
+    margin-bottom: 1rem;
+}
+
+.tag {
+    background-color: #f0f0f0;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tag__remove {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 商品カード */
+.product-index__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: scale(1.02);
+}
+
+.product-card__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card__name {
+    font-size: 1.2rem;
+    margin: 1rem 0 0.5rem;
+}
+
+.product-card__price {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.product-card__detail-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #2196F3;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* ページネーション */
+.pagination {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* モバイル対応 */
+@media (max-width: 600px) {
+
+    .product-index__search-form,
+    .product-index__sort-form {
+        flex-direction: column;
+    }
+
+    .product-card__image {
+        height: 150px;
+    }
+}

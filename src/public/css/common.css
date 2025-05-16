@@ -1,0 +1,28 @@
+header {
+    width: 1512px;
+    height: 53px;
+    gap: 10px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 112px;
+    height: 33px;
+
+    font-family: 'jsMath-cmti10', serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: 0;
+
+    text-decoration: none;
+    color: #F5C800;
+}

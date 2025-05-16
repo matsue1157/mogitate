@@ -1,0 +1,11 @@
+*.sqlite*
+# Ignore Laravel's default environment files
+.env
+.env.*
+
+# Ignore compiled Blade templates, cache, and logs
+/storage/*.key
+/storage/app/*
+!/storage/app/public
+/storage/framework/*
+/storage/logs

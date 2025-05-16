@@ -1,0 +1,215 @@
+/* ================================
+   全体ラッパー
+================================= */
+.product-wrapper {
+    background: #F8F8F8;
+    padding: 70px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* ================================
+   商品一覧エリア全体
+================================= */
+.product-index {
+    width: 1512px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 auto;
+}
+
+/* タイトルと追加ボタン行 */
+.product-index__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    height: 50px;
+    margin-bottom: 24px;
+}
+
+.product-index__title {
+    font-family: 'Hiragino Kaku Gothic Pro';
+    font-weight: 600;
+    font-size: 32px;
+    color: #333333;
+    margin: 0;
+}
+
+.product-index__add-button {
+    flex: none;
+}
+
+/* ================================
+   「＋商品を追加」ボタン
+================================= */
+.button-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 20px;
+    background: #FFA929;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    font-family: 'Hiragino Kaku Gothic Pro';
+    font-weight: 600;
+    font-size: 16px;
+    color: #4B4B4B;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.button-add:hover {
+    background-color: #ff9900;
+}
+
+/* ================================
+   並び替えフォーム
+================================= */
+.product-index__sort-form {
+    width: 240px;
+}
+
+.product-index__sort-form select {
+    width: 100%;
+    padding: 11px 10px;
+    border: 1px solid #E0DFDE;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.product-index__tag {
+    font-weight: bold;
+    color: #333;
+}
+
+/* タグの装飾 */
+.tag {
+    margin-left: 10px;
+    background: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.tag__remove {
+    margin-left: 8px;
+    color: #999;
+    text-decoration: none;
+}
+
+/* ================================
+   商品カード一覧
+================================= */
+.product-index__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1162px;
+    margin: 0 auto;
+}
+
+/* 商品カード */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    width: 374px;
+    height: 350px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
+}
+
+/* 商品画像 */
+.product-card__image {
+    width: 100%;
+    height: 281px;
+    object-fit: cover;
+}
+
+/* 商品名と価格 */
+.product-card__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    height: 69px;
+}
+
+.product-card__name,
+.product-card__price {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    color: #4B4B4B;
+    line-height: 29px;
+    margin: 0;
+}
+
+/* 詳細ボタン（必要に応じて） */
+.product-card__detail-button {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #4B4B4B;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.product-card__detail-button:hover {
+    background-color: #2f2f2f;
+}
+
+/* ================================
+   ページネーション
+================================= */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.pagination .page-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #4B4B4B;
+    font-family: 'Hiragino Kaku Gothic Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    transition: background-color 0.2s ease;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #F5C800;
+    color: #fff;
+    border-color: #F5C800;
+}
+
+.pagination .page-link:hover {
+    background-color: #f0f0f0;
+}
+
+.pagination .page-item.disabled .page-link {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.pagination .page-link svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
